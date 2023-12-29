@@ -1,5 +1,4 @@
 from django.conf import settings
-import stripe as stripe
 from stripe import Customer, PaymentMethod, Price, Subscription, Account, PaymentIntent, AccountLink
 
 SECRET_KEY = settings.STRIPE_SECRET_KEY
@@ -115,4 +114,3 @@ class StripeClient:
                 capture_method="automatic",
                 payment_method=payment_method_id,
                 metadata={}) # meta data if any additional data is required
-
